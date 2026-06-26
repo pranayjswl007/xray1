@@ -15,5 +15,6 @@ while ($true) {
     [Win32.MouseInput]::mouse_event($MOUSEEVENTF_MOVE, 1, 0, 0, 0)   # +1px right
     Start-Sleep -Milliseconds 50
     [Win32.MouseInput]::mouse_event($MOUSEEVENTF_MOVE, -1, 0, 0, 0)  # back
+    Write-Host ("[{0:yyyy-MM-dd HH:mm:ss}] moved" -f (Get-Date))
     Start-Sleep -Seconds 30
 }
